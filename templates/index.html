@@ -16,7 +16,7 @@
             
             <form method="POST">
                 {% csrf_token %}
-                <div class="input-group mb-3" id="">
+                <div class="input-group mb-3">
                     <input type="text" class="form-control" name="queryBox" placeholder="For eg. Mumbai" value="{{city_weather.city}}">
                     <div class="input-group-append">
                         <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
