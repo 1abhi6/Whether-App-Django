@@ -13,10 +13,10 @@
     <div class="container d-flex justify-content-center">
         <div class="card mt-5 p-4">
 
-            <form action="POST">
+            <form method="POST">
                 {% csrf_token %}
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="queryBox">
+                    <input type="text" class="form-control" name="queryBox" value="{{result.city_name}}">
                     <div class="input-group-append">
                         <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
                     </div>
