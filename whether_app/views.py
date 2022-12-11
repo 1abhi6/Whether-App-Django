@@ -19,12 +19,12 @@ def home(request):
                 'city': city.capitalize(),
                 'temperature': round(resp['main']['temp']-273.15, 2),
                 'description': resp['weather'][0]['description'].capitalize(),
-                'icon': resp['weather'][0]['icon']
+                'icon': resp['weather'][0]['icon'],
+                'status':True
             }
 
             result = {
                 'city_weather': city_weather,
-                'city_name': query
             }
         except:
             pass
