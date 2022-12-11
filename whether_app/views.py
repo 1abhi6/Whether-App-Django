@@ -10,7 +10,7 @@ def home(request):
 
     city_weather = {
         'city': city.capitalize(),
-        'temperature': resp['main']['temp'],
+        'temperature': round(resp['main']['temp']-273.15,2),
         'description': resp['weather'][0]['description'].capitalize(),
         'icon': resp['weather'][0]['icon']
     }
