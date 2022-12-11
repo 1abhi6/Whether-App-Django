@@ -18,9 +18,12 @@ def home(request):
             city_weather = {
                 'city': city.capitalize(),
                 'temperature': round(resp['main']['temp']-273.15, 2),
+                'min_temperature': round(resp['main']['temp_min']-273.15, 2),
+                'max_temperature': round(resp['main']['temp_max']-273.15, 2),
+                'humidity': resp['main']['humidity'],
                 'description': resp['weather'][0]['description'].capitalize(),
                 'icon': resp['weather'][0]['icon'],
-                'status':True
+                'status': True
             }
 
             result = {
